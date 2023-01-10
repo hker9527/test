@@ -15,7 +15,7 @@ jobs:
             echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
           done
       - name: Upload list
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: vpngate-list
           path: '*.ovpn'
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download list
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: vpngate-list
       - name: Test list
