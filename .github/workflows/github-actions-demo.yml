@@ -14,5 +14,21 @@ jobs:
             # Decode base64 to file
             echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
           done
-      - name: List files
-        run: ls -l
+      - name: Upload list
+        uses: actions/upload-artifact@v2
+        with:
+          name: vpngate-list
+          path: '*.ovpn'
+  test_vpngate_list:
+    needs: fetch_vpngate_list
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download list
+        uses: actions/download-artifact@v2
+        with:
+          name: vpngate-list
+      - name: Test list
+        run: |
+          for file in *.ovpn; do
+            echo "Testing $file"
+          done
