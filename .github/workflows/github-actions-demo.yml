@@ -39,4 +39,4 @@ jobs:
       #     done
       - id: testing
         name: Testing
-        run: echo ${{needs.prebuild.outputs.vpngate-list}}
+        run: echo ${{needs.prepare.outputs.vpngate-list}}
