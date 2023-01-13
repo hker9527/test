@@ -15,6 +15,7 @@ jobs:
           while IFS="," read -r hostName ip score ping speed countryLong countryShort numVpnSessions uptime totalUsers totalTraffic logType operator message openVPN_ConfigData_Base64; do
             if [[ "$ip" != "" ]]; then
               echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
+              break
             fi
           done
           echo "vpngate-list=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
