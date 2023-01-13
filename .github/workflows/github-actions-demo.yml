@@ -5,10 +5,10 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     outputs:
-      vpngate-list: ${{ steps.fetch-list.outputs.vpngate-list }}
+      vpngate-profiles: ${{ steps.fetch-list.outputs.vpngate-profiles }}
     steps:
-      - id: fetch-list
-        name: Fetch list
+      - id: fetch-profiles
+        name: Fetch profiles
         run: |
           curl -s https://www.vpngate.net/api/iphone/ | \
           tail -n +3 | \
@@ -18,31 +18,48 @@ jobs:
               break
             fi
           done
-          echo "vpngate-list=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
-      - id: upload-list
-        name: Upload list
+          echo "Fetched $(ls *.ovpn | wc -l) profiles"
+          echo "vpngate-profiles=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+          echo "Saved profile names to $GITHUB_OUTPUT"
+      - id: upload-profiles
+        name: Upload profiles
         uses: actions/upload-artifact@v3
         with:
-          name: vpngate-list
+          name: vpngate-profiles
           path: '*.ovpn'
   dispatch:
     needs: prepare
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        profile: ${{ fromJson(needs.prepare.outputs.vpngate-list) }}
+        profile: ${{ fromJson(needs.prepare.outputs.vpngate-profiles) }}
     steps:
-      # - name: Download list
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: vpngate-list
-      # - name: Test list
-      #   run: |
-      #     for file in *.ovpn; do
-      #       echo "Testing $file"
-      #     done
       - name: Testing ${{ matrix.profile }}
-        run: echo ${{ matrix.profile }}
+        run: echo
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: vpngate-profiles
+      - name: Check if profile exists
+        run: |
+          if [[ ! -f ${{ matrix.profile }} ]]; then
+            echo "Could not find ${{ matrix.profile }}"
+            exit 1
+          fi
+      - name: Install prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends openvpn
+      - name: Connect to VPN
+        run: sudo openvpn --config ${{ matrix.profile }}
+      - name: Wait for the connection to be established
+        timeout-minutes: 1
+        run: |
+          until ping -c 1 1.1.1.1; do
+            sleep 1
+          done
+      - name: curl test
+        run: curl -s https://ipinfo.io/json
   cleanup:
     needs: dispatch
     runs-on: ubuntu-latest
@@ -50,4 +67,4 @@ jobs:
       - name: Cleanup
         uses: geekyeggo/delete-artifact@v2
         with:
-          name: vpngate-list
+          name: vpngate-profiles
