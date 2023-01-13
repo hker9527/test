@@ -56,7 +56,7 @@ jobs:
         timeout-minutes: 1
         run: |
           until ping -c 1 -w 1 1.1.1.1; do
-            cat vpn.log
+            sudo cat vpn.log
             echo "---------------------------------"
             sleep 1
           done
