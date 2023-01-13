@@ -29,6 +29,7 @@ jobs:
   dispatch:
     needs: prepare
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
       matrix:
         profile: ${{ fromJson(needs.prepare.outputs.vpngate-profiles) }}
