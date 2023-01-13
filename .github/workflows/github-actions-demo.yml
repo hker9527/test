@@ -13,10 +13,11 @@ jobs:
           curl -s https://www.vpngate.net/api/iphone/ | \
           tail -n +3 | \
           while IFS="," read -r hostName ip score ping speed countryLong countryShort numVpnSessions uptime totalUsers totalTraffic logType operator message openVPN_ConfigData_Base64; do
-            # Decode base64 to file
-            echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
+            if [[ "$ip" != "" ]]; then
+              echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
+            fi
           done
-          echo "::set-output name=vpngate_list::$(ls *.ovpn)"
+          echo "vpngate_list=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
       - id: upload-list
         name: Upload list
         uses: actions/upload-artifact@v3
