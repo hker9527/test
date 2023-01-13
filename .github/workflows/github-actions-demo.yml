@@ -43,3 +43,11 @@ jobs:
       #     done
       - name: Testing ${{ matrix.profile }}
         run: echo ${{ matrix.profile }}
+  cleanup:
+    needs: dispatch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cleanup
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: vpngate-list
