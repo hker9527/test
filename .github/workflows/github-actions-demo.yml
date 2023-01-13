@@ -15,7 +15,6 @@ jobs:
           while IFS="," read -r hostName ip score ping speed countryLong countryShort numVpnSessions uptime totalUsers totalTraffic logType operator message openVPN_ConfigData_Base64; do
             if [[ "$ip" != "" ]]; then
               echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
-              break
             fi
           done
           echo "Fetched $(ls *.ovpn | wc -l) profiles"
@@ -26,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: vpngate-profiles
-          path: '*.ovpn'
+          path: "*.ovpn"
   dispatch:
     needs: prepare
     runs-on: ubuntu-latest
@@ -55,9 +54,9 @@ jobs:
       - name: Wait for the connection to be established
         timeout-minutes: 1
         run: |
-          until ping -c 1 -w 1 1.1.1.1; do
+          until ping -c 1 -w 1 1.1.1.1 > /dev/null 2>$1; do
             sudo cat vpn.log
-            echo "---------------------------------"
+            clear
             sleep 1
           done
       - name: curl test
