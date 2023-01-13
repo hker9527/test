@@ -2,11 +2,13 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  fetch_vpngate_list:
+  prepare:
     runs-on: ubuntu-latest
+    outputs:
+      vpngate-list: ${{ steps.fetch_list.outputs.vpngate_list }}
     steps:
-      - name: Fetch list
-        # HostName,IP,Score,Ping,Speed,CountryLong,CountryShort,NumVpnSessions,Uptime,TotalUsers,TotalTraffic,LogType,Operator,Message,OpenVPN_ConfigData_Base64
+      - id: fetch-list
+        name: Fetch list
         run: |
           curl -s https://www.vpngate.net/api/iphone/ | \
           tail -n +3 | \
@@ -14,21 +16,26 @@ jobs:
             # Decode base64 to file
             echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
           done
-      - name: Upload list
+          echo "::set-output name=vpngate_list::$(ls *.ovpn)"
+      - id: upload-list
+        name: Upload list
         uses: actions/upload-artifact@v3
         with:
           name: vpngate-list
           path: '*.ovpn'
-  test_vpngate_list:
-    needs: fetch_vpngate_list
+  dispatch:
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - name: Download list
-        uses: actions/download-artifact@v3
-        with:
-          name: vpngate-list
-      - name: Test list
-        run: |
-          for file in *.ovpn; do
-            echo "Testing $file"
-          done
+      # - name: Download list
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: vpngate-list
+      # - name: Test list
+      #   run: |
+      #     for file in *.ovpn; do
+      #       echo "Testing $file"
+      #     done
+      - id: testing
+        name: Testing
+        run: echo ${{needs.prebuild.outputs.os}}
