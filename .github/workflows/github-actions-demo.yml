@@ -56,7 +56,11 @@ jobs:
         timeout-minutes: 1
         run: |
           until ping -c 1 -W 1 1.1.1.1 > /dev/null 2>&1; do
-            sudo cat vpn.log
+            grep "Initialization Sequence Completed" vpn.log && exit 0
+            grep "AUTH_FAILED" vpn.log && exit 1
+            grep "TLS_ERROR" vpn.log && exit 1
+            grep "VERIFY_ERROR" vpn.log && exit 1
+
             echo "---------------------------------"
             sleep 1
           done
