@@ -27,6 +27,9 @@ jobs:
   dispatch:
     needs: prepare
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        profile: ${{ fromJson(needs.prepare.outputs.vpngate-list) }}
     steps:
       # - name: Download list
       #   uses: actions/download-artifact@v3
@@ -37,6 +40,5 @@ jobs:
       #     for file in *.ovpn; do
       #       echo "Testing $file"
       #     done
-      - id: testing
-        name: Testing
-        run: echo ${{needs.prepare.outputs.vpngate-list}}
+      - name: Testing ${{ matrix.profile }}
+        run: echo ${{ matrix.profile }}
