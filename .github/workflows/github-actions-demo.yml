@@ -5,7 +5,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     outputs:
-      vpngate-profiles: ${{ steps.fetch-list.outputs.vpngate-profiles }}
+      vpngate-profiles: ${{ steps.fetch-profiles.outputs.vpngate-profiles }}
     steps:
       - id: fetch-profiles
         name: Fetch profiles
