@@ -5,7 +5,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     outputs:
-      vpngate-list: ${{ steps.fetch_list.outputs.vpngate_list }}
+      vpngate-list: ${{ steps.fetch-list.outputs.vpngate-list }}
     steps:
       - id: fetch-list
         name: Fetch list
@@ -17,7 +17,7 @@ jobs:
               echo "$openVPN_ConfigData_Base64" | tr -d "\r\n" | base64 -d > "$ip.ovpn"
             fi
           done
-          echo "vpngate_list=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+          echo "vpngate-list=$(ls *.ovpn | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
       - id: upload-list
         name: Upload list
         uses: actions/upload-artifact@v3
