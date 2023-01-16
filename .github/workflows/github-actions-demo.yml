@@ -55,14 +55,17 @@ jobs:
         run: |
           sudo openvpn --config ${{ matrix.profile }} --log "vpn.log" --daemon
           until ping -c 1 -W 1 1.1.1.1 > /dev/null 2>&1; do
-            grep "Initialization Sequence Completed" vpn.log && exit 0
-            grep "AUTH_FAILED" vpn.log && exit 1
-            grep "TLS_ERROR" vpn.log && exit 1
-            grep "VERIFY_ERROR" vpn.log && exit 1
+            sudo grep "Initialization Sequence Completed" vpn.log && exit 0
+            sudo grep "AUTH_FAILED" vpn.log && exit 1
+            sudo grep "TLS_ERROR" vpn.log && exit 1
+            sudo grep "VERIFY_ERROR" vpn.log && exit 1
 
-            echo "---------------------------------"
             sleep 1
           done
+          echo "Connection Failed!"
+          echo "----- vpn.log -----"
+          sudo tail -n5 vpn.log
+          exit 1
       - name: curl test
         run: curl -s https://ipinfo.io/json
   cleanup:
