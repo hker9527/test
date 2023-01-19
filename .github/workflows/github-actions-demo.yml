@@ -34,12 +34,12 @@ jobs:
       matrix:
         profile: ${{ fromJson(needs.prepare.outputs.vpngate-profiles) }}
     steps:
-      - name: Testing ${{ matrix.profile }}
-        run: echo
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: vpngate-profiles
+      - name: Pull repository
+        uses: actions/checkout@v3
       - name: Check if profile exists
         run: |
           if [[ ! -f ${{ matrix.profile }} ]]; then
@@ -67,7 +67,16 @@ jobs:
           sudo tail -n5 vpn.log
           exit 1
       - name: curl test
-        run: curl -s https://ipinfo.io/json
+        run: |
+          ip=$(curl -s https://ip.me)
+          echo "IP: $ip"
+          if [[ $ip".ovpn" != "${{ matrix.profile }}" ]]; then
+            echo "IP does not match profile name"
+            exit 1
+          fi
+      - name: Cleanup
+        run: |
+          sudo killall openvpn
   cleanup:
     needs: dispatch
     runs-on: ubuntu-latest
