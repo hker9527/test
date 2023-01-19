@@ -40,6 +40,8 @@ jobs:
           name: vpngate-profiles
       - name: Pull repository
         uses: actions/checkout@v3
+        with:
+          path: "repo"
       - name: Check if profile exists
         run: |
           if [[ ! -f ${{ matrix.profile }} ]]; then
