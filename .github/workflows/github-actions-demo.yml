@@ -76,6 +76,16 @@ jobs:
             echo "IP does not match profile name"
             exit 1
           fi
+      - name: "Game test: Umamusume"
+        run: ./repo/index.sh umamusume
+      - name: "Game test: World Flipper"
+        run: ./repo/index.sh worldflipper
+      - name: "Game test: Kantai Collection"
+        run: ./repo/index.sh kancolle
+      - name: "Game test: Konosuba"
+        run: ./repo/index.sh konosuba
+      - name: "Game test: Kirara Fantasia"
+        run: ./repo/index.sh kirara
       - name: Cleanup
         run: |
           sudo killall openvpn

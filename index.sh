@@ -7,23 +7,43 @@ fetch() {
     -o /dev/null \
     -L \
     --connect-timeout 3 \
-    $@
+    $1
 }
 
-uma=$(fetch "https://api-umamusume.cygames.jp/")
-wf=$(fetch "https://api.worldflipper.jp/")
-kc=$(fetch "http://203.104.209.7/kcscontents/news/")
-knsb=$(fetch "https://api.konosubafd.jp/")
-krr=$(fetch "https://kirara.star-api.com/cat_news/update")
+check() {
+    received=$(echo "$1" | jq -r ".response_code")
+    expected=$2
 
-games=$(jq -n \
-    --argjson uma "$uma" \
-    --argjson wf "$wf" \
-    --argjson kc "$kc" \
-    --argjson knsb "$knsb" \
-    --argjson krr "$krr" \
-    '{uma: $uma, wf: $wf, kc: $kc, knsb: $knsb, krr: $krr}')
-    
-jq -n \
-    --argjson games "$games" \
-    '{games: $games}' > result.json
+    if [ "$received" = "$expected" ]; then
+        exit 0
+    else
+        exit 1
+    fi
+}
+
+# switch $1
+case $1 in
+    "umamusume")
+        res=$(fetch "https://api-umamusume.cygames.jp/" | tee umamusume.json)
+        check "$res" 404
+        ;;
+    "worldflipper")
+        res=$(fetch "https://api.worldflipper.jp/" | tee worldflipper.json)
+        check "$res" 200
+        ;;
+    "kancolle")
+        res=$(fetch "http://203.104.209.7/kcscontents/news/" | tee kancolle.json)
+        check "$res" 200
+        ;;
+    "konosuba")
+        res=$(fetch "https://api.konosubafd.jp/" | tee konosuba.json)
+        check "$res" 200
+        ;;
+    "kirara")
+        res=$(fetch "https://kirara.star-api.com/cat_news/update" | tee kirara.json)
+        check "$res" 200
+        ;;
+    *)
+        exit 2
+        ;;
+esac
