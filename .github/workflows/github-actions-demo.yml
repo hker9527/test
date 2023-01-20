@@ -93,6 +93,7 @@ jobs:
       - name: debug
         if: always()
         run: |
+          ls -R .
           echo "----- umamusume.json -----"
           cat umamusume.json
           echo "----- worldflipper.json -----"
