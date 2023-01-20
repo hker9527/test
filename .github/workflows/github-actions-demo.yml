@@ -90,6 +90,19 @@ jobs:
       - name: "Game test: Kirara Fantasia"
         if: always()
         run: ./repo/index.sh kirara
+      - name: debug
+        if: always()
+        run: |
+          echo "----- umamusume.json -----"
+          cat umamusume.json
+          echo "----- worldflipper.json -----"
+          cat worldflipper.json
+          echo "----- kancolle.json -----"
+          cat kancolle.json
+          echo "----- konosuba.json -----"
+          cat konosuba.json
+          echo "----- kirara.json -----"
+          cat kirara.json
       - name: Cleanup
         if: always()
         run: |
