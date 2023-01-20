@@ -14,6 +14,9 @@ check() {
     received=$(echo "$1" | jq -r ".response_code")
     expected=$2
 
+    echo "Received: $received"
+    echo "Expected: $expected"
+
     if [ "$received" = "$expected" ]; then
         exit 0
     else
