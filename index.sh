@@ -3,7 +3,7 @@ fetch() {
     curl \
     -H 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; ALP-AL00 Build/HUAWEIALP-AL00)' \
     -s \
-    -w @wo.txt \
+    -w '{"response_code":%{response_code},"speed_download":%{speed_download},"time_connect":%{time_connect}}' \
     -o /dev/null \
     -L \
     --connect-timeout 3 \
