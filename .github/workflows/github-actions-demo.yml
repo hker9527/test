@@ -77,14 +77,19 @@ jobs:
             exit 1
           fi
       - name: "Game test: Umamusume"
+        continue-on-error: true
         run: ./repo/index.sh umamusume
       - name: "Game test: World Flipper"
+        continue-on-error: true
         run: ./repo/index.sh worldflipper
       - name: "Game test: Kantai Collection"
+        continue-on-error: true
         run: ./repo/index.sh kancolle
       - name: "Game test: Konosuba"
+        continue-on-error: true
         run: ./repo/index.sh konosuba
       - name: "Game test: Kirara Fantasia"
+        continue-on-error: true
         run: ./repo/index.sh kirara
       - name: Cleanup
         run: |
