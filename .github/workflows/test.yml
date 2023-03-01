@@ -1,6 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push, workflow_dispatch]
+name: Test VPNGate servers
+on: [workflow_dispatch]
 jobs:
   prepare:
     runs-on: ubuntu-latest
