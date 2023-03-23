@@ -1,474 +1,425 @@
-[
-    {
-        "ip": "59.213.169.226",
-        "uma": 926,
-        "wf": 560,
-        "kc": 901,
-        "knsb": 296,
-        "krr": 957
-    },
-    {
-        "ip": "15.139.95.233",
-        "uma": 792,
-        "wf": 215,
-        "kc": 608,
-        "knsb": 253,
-        "krr": 755
-    },
-    {
-        "ip": "82.131.105.171",
-        "uma": 324,
-        "wf": 406,
-        "kc": 429,
-        "knsb": 537,
-        "krr": 834
-    },
-    {
-        "ip": "8.145.146.198",
-        "uma": 177,
-        "wf": 346,
-        "kc": 357,
-        "knsb": 889,
-        "krr": 453
-    },
-    {
-        "ip": "24.40.118.38",
-        "uma": 322,
-        "wf": -403,
-        "kc": 953,
-        "knsb": 228,
-        "krr": 934
-    },
-    {
-        "ip": "118.254.123.200",
-        "uma": 835,
-        "wf": -403,
-        "kc": 659,
-        "knsb": 126,
-        "krr": 145
-    },
-    {
-        "ip": "32.62.174.96",
-        "uma": -403,
-        "wf": 665,
-        "kc": 671,
-        "knsb": 320,
-        "krr": 848
-    },
-    {
-        "ip": "25.76.227.24",
-        "uma": 911,
-        "wf": 901,
-        "kc": 223,
-        "knsb": 202,
-        "krr": 501
-    },
-    {
-        "ip": "15.117.100.113",
-        "uma": 778,
-        "wf": 717,
-        "kc": 357,
-        "knsb": 251,
-        "krr": 118
-    },
-    {
-        "ip": "16.122.89.222",
-        "uma": 994,
-        "wf": 676,
-        "kc": 305,
-        "knsb": 566,
-        "krr": 886
-    },
-    {
-        "ip": "226.25.142.160",
-        "uma": 72,
-        "wf": 1,
-        "kc": 911,
-        "knsb": 186,
-        "krr": 894
-    },
-    {
-        "ip": "135.166.250.216",
-        "uma": 506,
-        "wf": 223,
-        "kc": 806,
-        "knsb": 522,
-        "krr": 287
-    },
-    {
-        "ip": "151.159.162.178",
-        "uma": 674,
-        "wf": 368,
-        "kc": 282,
-        "knsb": 723,
-        "krr": 299
-    },
-    {
-        "ip": "148.209.238.96",
-        "uma": 532,
-        "wf": 174,
-        "kc": 900,
-        "knsb": 343,
-        "krr": 597
-    },
-    {
-        "ip": "123.135.57.141",
-        "uma": 913,
-        "wf": 157,
-        "kc": 941,
-        "knsb": 710,
-        "krr": 166
-    },
-    {
-        "ip": "229.192.129.174",
-        "uma": 740,
-        "wf": 298,
-        "kc": 781,
-        "knsb": 721,
-        "krr": -403
-    },
-    {
-        "ip": "78.42.252.66",
-        "uma": 178,
-        "wf": 327,
-        "kc": 976,
-        "knsb": 286,
-        "krr": 110
-    },
-    {
-        "ip": "57.123.14.175",
-        "uma": -403,
-        "wf": 840,
-        "kc": 170,
-        "knsb": 334,
-        "krr": 398
-    },
-    {
-        "ip": "170.224.139.107",
-        "uma": 104,
-        "wf": 157,
-        "kc": 22,
-        "knsb": 636,
-        "krr": 685
-    },
-    {
-        "ip": "7.86.124.62",
-        "uma": -403,
-        "wf": 339,
-        "kc": 489,
-        "knsb": 294,
-        "krr": -403
-    },
-    {
-        "ip": "210.233.189.2",
-        "uma": 127,
-        "wf": 290,
-        "kc": 67,
-        "knsb": 777,
-        "krr": 543
-    },
-    {
-        "ip": "46.164.165.3",
-        "uma": 374,
-        "wf": -403,
-        "kc": 126,
-        "knsb": 830,
-        "krr": 536
-    },
-    {
-        "ip": "141.181.210.130",
-        "uma": 356,
-        "wf": -403,
-        "kc": -403,
-        "knsb": 896,
-        "krr": 318
-    },
-    {
-        "ip": "161.124.4.227",
-        "uma": 699,
-        "wf": 692,
-        "kc": 924,
-        "knsb": 474,
-        "krr": 270
-    },
-    {
-        "ip": "83.63.158.68",
-        "uma": 192,
-        "wf": 751,
-        "kc": 325,
-        "knsb": 248,
-        "krr": 352
-    },
-    {
-        "ip": "204.171.168.194",
-        "uma": 44,
-        "wf": 220,
-        "kc": 635,
-        "knsb": 842,
-        "krr": 704
-    },
-    {
-        "ip": "2.22.236.54",
-        "uma": 761,
-        "wf": 907,
-        "kc": 729,
-        "knsb": 554,
-        "krr": 823
-    },
-    {
-        "ip": "136.246.128.152",
-        "uma": 170,
-        "wf": 336,
-        "kc": 390,
-        "knsb": 628,
-        "krr": 380
-    },
-    {
-        "ip": "187.242.84.56",
-        "uma": 178,
-        "wf": 794,
-        "kc": 445,
-        "knsb": 550,
-        "krr": -403
-    },
-    {
-        "ip": "103.7.17.11",
-        "uma": 407,
-        "wf": 656,
-        "kc": -403,
-        "knsb": 174,
-        "krr": 885
-    },
-    {
-        "ip": "196.81.9.55",
-        "uma": 91,
-        "wf": 307,
-        "kc": 582,
-        "knsb": 855,
-        "krr": 328
-    },
-    {
-        "ip": "54.121.61.83",
-        "uma": 953,
-        "wf": 690,
-        "kc": 103,
-        "knsb": 288,
-        "krr": 98
-    },
-    {
-        "ip": "230.141.18.194",
-        "uma": -403,
-        "wf": -403,
-        "kc": 834,
-        "knsb": 614,
-        "krr": 255
-    },
-    {
-        "ip": "141.47.41.100",
-        "uma": 240,
-        "wf": 279,
-        "kc": 708,
-        "knsb": 701,
-        "krr": 772
-    },
-    {
-        "ip": "169.147.133.41",
-        "uma": 37,
-        "wf": 457,
-        "kc": 268,
-        "knsb": -403,
-        "krr": 1
-    },
-    {
-        "ip": "158.150.43.137",
-        "uma": 759,
-        "wf": 751,
-        "kc": 565,
-        "knsb": 864,
-        "krr": 991
-    },
-    {
-        "ip": "128.171.249.8",
-        "uma": 311,
-        "wf": 470,
-        "kc": 942,
-        "knsb": 723,
-        "krr": 386
-    },
-    {
-        "ip": "185.93.171.237",
-        "uma": 10,
-        "wf": 63,
-        "kc": 116,
-        "knsb": 728,
-        "krr": 141
-    },
-    {
-        "ip": "139.237.100.15",
-        "uma": 938,
-        "wf": 418,
-        "kc": 706,
-        "knsb": 245,
-        "krr": -403
-    },
-    {
-        "ip": "50.162.111.195",
-        "uma": 1,
-        "wf": 208,
-        "kc": 397,
-        "knsb": 311,
-        "krr": 387
-    },
-    {
-        "ip": "188.72.182.91",
-        "uma": 42,
-        "wf": 897,
-        "kc": 766,
-        "knsb": 884,
-        "krr": 663
-    },
-    {
-        "ip": "57.73.140.47",
-        "uma": 258,
-        "wf": 907,
-        "kc": -403,
-        "knsb": 335,
-        "krr": 957
-    },
-    {
-        "ip": "116.211.28.73",
-        "uma": 697,
-        "wf": 758,
-        "kc": 828,
-        "knsb": 187,
-        "krr": 450
-    },
-    {
-        "ip": "16.2.110.126",
-        "uma": -403,
-        "wf": 869,
-        "kc": 720,
-        "knsb": 270,
-        "krr": 244
-    },
-    {
-        "ip": "4.1.165.125",
-        "uma": 67,
-        "wf": 834,
-        "kc": 373,
-        "knsb": -403,
-        "krr": 17
-    },
-    {
-        "ip": "79.228.124.129",
-        "uma": 240,
-        "wf": 931,
-        "kc": 881,
-        "knsb": 94,
-        "krr": 383
-    },
-    {
-        "ip": "64.35.72.186",
-        "uma": 561,
-        "wf": 644,
-        "kc": 818,
-        "knsb": 800,
-        "krr": -403
-    },
-    {
-        "ip": "44.22.152.31",
-        "uma": 665,
-        "wf": 213,
-        "kc": 217,
-        "knsb": 542,
-        "krr": 882
-    },
-    {
-        "ip": "36.70.69.159",
-        "uma": 892,
-        "wf": 425,
-        "kc": 780,
-        "knsb": 744,
-        "krr": 41
-    },
-    {
-        "ip": "175.198.23.104",
-        "uma": 973,
-        "wf": 499,
-        "kc": -403,
-        "knsb": -403,
-        "krr": -403
-    },
-    {
-        "ip": "230.145.100.11",
-        "uma": 612,
-        "wf": 38,
-        "kc": 296,
-        "knsb": 195,
-        "krr": 812
-    },
-    {
-        "ip": "39.241.205.124",
-        "uma": 101,
-        "wf": 998,
-        "kc": 625,
-        "knsb": 520,
-        "krr": 76
-    },
-    {
-        "ip": "127.18.31.63",
-        "uma": 366,
-        "wf": 726,
-        "kc": 808,
-        "knsb": 458,
-        "krr": 225
-    },
-    {
-        "ip": "181.4.9.142",
-        "uma": 168,
-        "wf": -403,
-        "kc": 466,
-        "knsb": 955,
-        "krr": 481
-    },
-    {
-        "ip": "202.71.193.141",
-        "uma": 576,
-        "wf": 236,
-        "kc": 813,
-        "knsb": -403,
-        "krr": 426
-    },
-    {
-        "ip": "154.57.241.211",
-        "uma": 65,
-        "wf": 174,
-        "kc": 642,
-        "knsb": -403,
-        "krr": 221
-    },
-    {
-        "ip": "188.40.75.15",
-        "uma": 631,
-        "wf": 51,
-        "kc": -403,
-        "knsb": 689,
-        "krr": 503
-    },
-    {
-        "ip": "27.84.96.236",
-        "uma": 834,
-        "wf": 599,
-        "kc": 951,
-        "knsb": 907,
-        "krr": 977
-    },
-    {
-        "ip": "174.156.55.222",
-        "uma": 57,
-        "wf": 709,
-        "kc": 279,
-        "knsb": 696,
-        "krr": 172
-    }
-]
+{
+    "ts": 1679541911060,
+    "results": [
+        {
+            "ip": "179.66.145.62",
+            "umamusume": 561,
+            "worldflipper": 562,
+            "kancolle": 868,
+            "konosuba": 299
+        },
+        {
+            "ip": "180.236.202.60",
+            "umamusume": 478,
+            "worldflipper": 472,
+            "kancolle": 928,
+            "konosuba": 679
+        },
+        {
+            "ip": "27.176.159.211",
+            "umamusume": 656,
+            "worldflipper": 418,
+            "kancolle": 147,
+            "konosuba": 720
+        },
+        {
+            "ip": "199.187.92.91",
+            "umamusume": 695,
+            "worldflipper": 294,
+            "kancolle": 56,
+            "konosuba": 869
+        },
+        {
+            "ip": "145.101.69.174",
+            "umamusume": 180,
+            "worldflipper": 722,
+            "kancolle": 742,
+            "konosuba": 824
+        },
+        {
+            "ip": "53.126.26.55",
+            "umamusume": -403,
+            "worldflipper": 679,
+            "kancolle": 449,
+            "konosuba": 499
+        },
+        {
+            "ip": "194.242.172.110",
+            "umamusume": 812,
+            "worldflipper": 912,
+            "kancolle": 214,
+            "konosuba": -403
+        },
+        {
+            "ip": "19.90.142.60",
+            "umamusume": 229,
+            "worldflipper": 660,
+            "kancolle": 178,
+            "konosuba": 643
+        },
+        {
+            "ip": "35.30.102.104",
+            "umamusume": -403,
+            "worldflipper": 705,
+            "kancolle": 148,
+            "konosuba": 371
+        },
+        {
+            "ip": "36.134.21.32",
+            "umamusume": 261,
+            "worldflipper": 233,
+            "kancolle": 882,
+            "konosuba": 375
+        },
+        {
+            "ip": "8.209.208.207",
+            "umamusume": 192,
+            "worldflipper": 216,
+            "kancolle": 154,
+            "konosuba": 777
+        },
+        {
+            "ip": "148.69.30.205",
+            "umamusume": 325,
+            "worldflipper": 547,
+            "kancolle": -403,
+            "konosuba": 490
+        },
+        {
+            "ip": "28.161.100.109",
+            "umamusume": 246,
+            "worldflipper": 54,
+            "kancolle": 361,
+            "konosuba": 98
+        },
+        {
+            "ip": "155.220.157.99",
+            "umamusume": 39,
+            "worldflipper": 25,
+            "kancolle": 37,
+            "konosuba": 911
+        },
+        {
+            "ip": "78.217.60.13",
+            "umamusume": 796,
+            "worldflipper": 673,
+            "kancolle": 736,
+            "konosuba": 460
+        },
+        {
+            "ip": "35.112.248.73",
+            "umamusume": 49,
+            "worldflipper": 396,
+            "kancolle": 18,
+            "konosuba": 64
+        },
+        {
+            "ip": "139.240.27.246",
+            "umamusume": 953,
+            "worldflipper": 956,
+            "kancolle": 123,
+            "konosuba": 297
+        },
+        {
+            "ip": "63.161.219.235",
+            "umamusume": 608,
+            "worldflipper": 786,
+            "kancolle": 459,
+            "konosuba": 436
+        },
+        {
+            "ip": "188.210.141.240",
+            "umamusume": 256,
+            "worldflipper": 425,
+            "kancolle": 80,
+            "konosuba": 157
+        },
+        {
+            "ip": "75.96.254.19",
+            "umamusume": 997,
+            "worldflipper": 44,
+            "kancolle": 681,
+            "konosuba": 627
+        },
+        {
+            "ip": "199.131.241.108",
+            "umamusume": 143,
+            "worldflipper": 421,
+            "kancolle": 763,
+            "konosuba": 465
+        },
+        {
+            "ip": "127.61.170.14",
+            "umamusume": 986,
+            "worldflipper": 84,
+            "kancolle": 293,
+            "konosuba": 283
+        },
+        {
+            "ip": "43.222.168.68",
+            "umamusume": 8,
+            "worldflipper": 424,
+            "kancolle": 589,
+            "konosuba": 631
+        },
+        {
+            "ip": "183.76.52.173",
+            "umamusume": 605,
+            "worldflipper": 902,
+            "kancolle": 137,
+            "konosuba": 25
+        },
+        {
+            "ip": "68.148.53.41",
+            "umamusume": 497,
+            "worldflipper": 700,
+            "kancolle": 954,
+            "konosuba": 650
+        },
+        {
+            "ip": "3.17.223.91",
+            "umamusume": 32,
+            "worldflipper": 800,
+            "kancolle": 489,
+            "konosuba": 653
+        },
+        {
+            "ip": "203.160.42.157",
+            "umamusume": 250,
+            "worldflipper": 400,
+            "kancolle": 245,
+            "konosuba": 642
+        },
+        {
+            "ip": "99.84.161.124",
+            "umamusume": 521,
+            "worldflipper": 223,
+            "kancolle": 977,
+            "konosuba": 657
+        },
+        {
+            "ip": "159.120.77.194",
+            "umamusume": 334,
+            "worldflipper": 449,
+            "kancolle": 418,
+            "konosuba": 905
+        },
+        {
+            "ip": "149.136.180.55",
+            "umamusume": 755,
+            "worldflipper": 39,
+            "kancolle": 104,
+            "konosuba": 28
+        },
+        {
+            "ip": "41.30.20.53",
+            "umamusume": 960,
+            "worldflipper": 616,
+            "kancolle": 635,
+            "konosuba": -403
+        },
+        {
+            "ip": "155.32.27.92",
+            "umamusume": 416,
+            "worldflipper": 532,
+            "kancolle": -403,
+            "konosuba": 547
+        },
+        {
+            "ip": "94.24.33.30",
+            "umamusume": 887,
+            "worldflipper": 390,
+            "kancolle": 948,
+            "konosuba": 428
+        },
+        {
+            "ip": "69.212.218.109",
+            "umamusume": 758,
+            "worldflipper": 83,
+            "kancolle": 334,
+            "konosuba": 504
+        },
+        {
+            "ip": "23.102.64.12",
+            "umamusume": 825,
+            "worldflipper": 456,
+            "kancolle": -403,
+            "konosuba": 602
+        },
+        {
+            "ip": "131.91.147.226",
+            "umamusume": -403,
+            "worldflipper": 213,
+            "kancolle": 811,
+            "konosuba": 474
+        },
+        {
+            "ip": "37.233.156.210",
+            "umamusume": 982,
+            "worldflipper": 718,
+            "kancolle": 172,
+            "konosuba": 465
+        },
+        {
+            "ip": "160.25.242.76",
+            "umamusume": 112,
+            "worldflipper": 596,
+            "kancolle": -403,
+            "konosuba": 333
+        },
+        {
+            "ip": "134.17.252.84",
+            "umamusume": 970,
+            "worldflipper": 284,
+            "kancolle": 454,
+            "konosuba": 532
+        },
+        {
+            "ip": "53.204.126.30",
+            "umamusume": 916,
+            "worldflipper": 525,
+            "kancolle": 424,
+            "konosuba": 665
+        },
+        {
+            "ip": "30.151.78.144",
+            "umamusume": 191,
+            "worldflipper": 144,
+            "kancolle": -403,
+            "konosuba": -403
+        },
+        {
+            "ip": "30.156.5.223",
+            "umamusume": 179,
+            "worldflipper": -403,
+            "kancolle": 245,
+            "konosuba": 774
+        },
+        {
+            "ip": "7.68.99.250",
+            "umamusume": 313,
+            "worldflipper": -403,
+            "kancolle": 611,
+            "konosuba": 642
+        },
+        {
+            "ip": "21.254.123.103",
+            "umamusume": 567,
+            "worldflipper": 380,
+            "kancolle": 762,
+            "konosuba": 909
+        },
+        {
+            "ip": "215.207.228.118",
+            "umamusume": 729,
+            "worldflipper": 10,
+            "kancolle": 201,
+            "konosuba": 30
+        },
+        {
+            "ip": "195.107.28.78",
+            "umamusume": -403,
+            "worldflipper": 177,
+            "kancolle": 349,
+            "konosuba": 186
+        },
+        {
+            "ip": "109.253.164.222",
+            "umamusume": 208,
+            "worldflipper": 71,
+            "kancolle": 152,
+            "konosuba": 271
+        },
+        {
+            "ip": "93.146.218.233",
+            "umamusume": 160,
+            "worldflipper": 547,
+            "kancolle": 415,
+            "konosuba": 258
+        },
+        {
+            "ip": "6.211.14.211",
+            "umamusume": 242,
+            "worldflipper": 908,
+            "kancolle": 979,
+            "konosuba": -403
+        },
+        {
+            "ip": "10.114.36.82",
+            "umamusume": 509,
+            "worldflipper": 836,
+            "kancolle": 258,
+            "konosuba": 358
+        },
+        {
+            "ip": "192.53.128.20",
+            "umamusume": -403,
+            "worldflipper": 811,
+            "kancolle": 79,
+            "konosuba": -403
+        },
+        {
+            "ip": "76.81.207.90",
+            "umamusume": 427,
+            "worldflipper": 912,
+            "kancolle": 398,
+            "konosuba": 29
+        },
+        {
+            "ip": "40.6.225.214",
+            "umamusume": 535,
+            "worldflipper": 337,
+            "kancolle": 35,
+            "konosuba": 860
+        },
+        {
+            "ip": "227.221.184.120",
+            "umamusume": 18,
+            "worldflipper": 729,
+            "kancolle": 723,
+            "konosuba": 736
+        },
+        {
+            "ip": "28.95.151.216",
+            "umamusume": 258,
+            "worldflipper": 260,
+            "kancolle": 624,
+            "konosuba": 68
+        },
+        {
+            "ip": "33.228.98.110",
+            "umamusume": 972,
+            "worldflipper": 250,
+            "kancolle": 321,
+            "konosuba": 355
+        },
+        {
+            "ip": "216.10.48.150",
+            "umamusume": -403,
+            "worldflipper": 902,
+            "kancolle": 491,
+            "konosuba": 988
+        },
+        {
+            "ip": "197.204.74.189",
+            "umamusume": 551,
+            "worldflipper": 433,
+            "kancolle": 71,
+            "konosuba": 825
+        },
+        {
+            "ip": "133.198.8.13",
+            "umamusume": 504,
+            "worldflipper": 700,
+            "kancolle": 324,
+            "konosuba": -403
+        },
+        {
+            "ip": "212.124.168.45",
+            "umamusume": 692,
+            "worldflipper": 624,
+            "kancolle": -403,
+            "konosuba": 966
+        }
+    ]
+}
