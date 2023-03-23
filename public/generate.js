@@ -3,7 +3,12 @@ const fs = require("fs");
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const games = ["uma", "wf", "kc", "knsb", "krr"];
+const games = [
+	"umamusume", 
+	"worldflipper",
+	"kancolle",
+	"konosuba"
+];
 
 const datas = [];
 
@@ -28,4 +33,7 @@ fs.mkdirSync("./profiles");
 for (const data of datas) {
 	fs.writeFileSync(`./profiles/${data.ip}.ovpn`, "dummy");
 }
-fs.writeFileSync("./results.json", JSON.stringify(datas, null, 4));
+fs.writeFileSync("./results.json", JSON.stringify({
+	ts: +new Date(),
+	results: datas
+}, null, 4));
